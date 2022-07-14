@@ -1,3 +1,4 @@
+
 package com.haeun.test;
 
 import java.util.ArrayList;
@@ -5,38 +6,38 @@ import java.util.ArrayList;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
-//DI ¼³Á¤ÇØÁÖ´Â ContainerÅ¬·¡½º - ½ºÇÁ¸µ ¼³Á¤¿¡ »ç¿ëµÇ´Â Å¬·¡½º
+//DI ì„¤ì •í•´ì£¼ëŠ” Containerí´ë˜ìŠ¤ - ìŠ¤í”„ë§ ì„¤ì •ì— ì‚¬ìš©ë˜ëŠ” í´ë˜ìŠ¤
 @Configuration
-//xmlÆÄÀÏ(applicationCTX.xml)À» Resource·Î ºÒ·¯¿À±â
+//xmlíŒŒì¼(applicationCTX.xml)ì„ Resourceë¡œ ë¶ˆëŸ¬ì˜¤ê¸°
 @ImportResource("classpath:applicationCTX.xml")
 public class ApplicationConfig {
 	
 	@Bean
-	public Student student1() {	//¹İÈ¯µÇ´Â ÀÚ·áÅ¸ÀÔÀÌ StudentÅ¬·¡½º, student1:beanÀÇ ÀÌ¸§(id)
+	public Student student1() {	//ë°˜í™˜ë˜ëŠ” ìë£Œíƒ€ì…ì´ Studentí´ë˜ìŠ¤, student1:beanì˜ ì´ë¦„(id)
 		
-		ArrayList<String> hobbys = new ArrayList<String>();	//¹è¿­ °´Ã¼
-		hobbys.add("¿îµ¿");
-		hobbys.add("³ë·¡");
+		ArrayList<String> hobbys = new ArrayList<String>();	//ë°°ì—´ ê°ì²´
+		hobbys.add("ìš´ë™");
+		hobbys.add("ë…¸ë˜");
 		
-		//student: bean ÀÌ¸§
-		Student student = new Student("È«±æµ¿", 25, hobbys);
+		//student: bean ì´ë¦„
+		Student student = new Student("í™ê¸¸ë™", 25, hobbys);
 		
-		//»ı¼ºÀÚ ¾øÀ¸¹Ç·Î, setter
+		//ìƒì„±ì ì—†ìœ¼ë¯€ë¡œ, setter
 		student.setWeight(80);
 		student.setHeight(180);
 		return student;
 	}
 	@Bean
-	public Student student2() {	//¹İÈ¯µÇ´Â ÀÚ·áÅ¸ÀÔÀÌ StudentÅ¬·¡½º, student2:beanÀÇ ÀÌ¸§(id)
+	public Student student2() {	//ë°˜í™˜ë˜ëŠ” ìë£Œíƒ€ì…ì´ Studentí´ë˜ìŠ¤, student2:beanì˜ ì´ë¦„(id)
 		
-		ArrayList<String> hobbys = new ArrayList<String>();	//¹è¿­ °´Ã¼
-		hobbys.add("´Ş¸®±â");
-		hobbys.add("ÀÚÀü°Å");
+		ArrayList<String> hobbys = new ArrayList<String>();	//ë°°ì—´ ê°ì²´
+		hobbys.add("ë‹¬ë¦¬ê¸°");
+		hobbys.add("ìì „ê±°");
 		
-		//student: bean ÀÌ¸§
-		Student student = new Student("±èÀ¯½Å", 25, hobbys);
+		//student: bean ì´ë¦„
+		Student student = new Student("ê¹€ìœ ì‹ ", 25, hobbys);
 		
-		//»ı¼ºÀÚ ¸¸µéÁö ¾Ê¾ÒÀ¸¹Ç·Î, setter·Î ¼³Á¤
+		//ìƒì„±ì ë§Œë“¤ì§€ ì•Šì•˜ìœ¼ë¯€ë¡œ, setterë¡œ ì„¤ì •
 		student.setWeight(60);
 		student.setHeight(150);
 		return student;
